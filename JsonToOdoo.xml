@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/jto" name="JsonToOdoo" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" url-mapping="/*">
+        <inSequence>
+            <log level="full"/>
+            <header name="Content-Type" scope="transport" value="application/json"/>
+            <property name="messageType" scope="axis2" type="STRING" value="application/json"/>
+            <!--             <property expression="$axis2:HTTP_SC" name="Status" scope="default" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+ -->
+            <send>
+                <endpoint key="odooJson"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>
