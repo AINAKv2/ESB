@@ -1,0 +1,146 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "nom" : {
+      "id" : "http://wso2jsonschema.org/nom",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "work_email" : {
+      "id" : "http://wso2jsonschema.org/work_email",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "titre" : {
+      "id" : "http://wso2jsonschema.org/titre",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "prenom" : {
+      "id" : "http://wso2jsonschema.org/prenom",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "work_phone" : {
+      "id" : "http://wso2jsonschema.org/work_phone",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ligne_interne" : {
+      "id" : "http://wso2jsonschema.org/ligne_interne",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ligne_directe" : {
+      "id" : "http://wso2jsonschema.org/ligne_directe",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "status" : {
+      "id" : "http://wso2jsonschema.org/status",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "centre_cout" : {
+      "id" : "http://wso2jsonschema.org/centre_cout",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ssnid" : {
+      "id" : "http://wso2jsonschema.org/ssnid",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "company_id" : {
+      "id" : "http://wso2jsonschema.org/company_id",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "pole_ids" : {
+      "id" : "http://wso2jsonschema.org/pole_ids",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "site_geo" : {
+      "id" : "http://wso2jsonschema.org/site_geo",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "fax" : {
+      "id" : "http://wso2jsonschema.org/fax",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "type_contrat" : {
+      "id" : "http://wso2jsonschema.org/type_contrat",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "address" : {
+      "id" : "http://wso2jsonschema.org/address",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "code_postal" : {
+      "id" : "http://wso2jsonschema.org/code_postal",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "birthday" : {
+      "id" : "http://wso2jsonschema.org/birthday",
+      "type" : "string"
+    },
+    "marital" : {
+      "id" : "http://wso2jsonschema.org/marital",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "mobile_personnel" : {
+      "id" : "http://wso2jsonschema.org/mobile_personnel",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ville" : {
+      "id" : "http://wso2jsonschema.org/ville",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "ville_naissance" : {
+      "id" : "http://wso2jsonschema.org/ville_naissance",
+      "type" : "string"
+    },
+    "mail_perso" : {
+      "id" : "http://wso2jsonschema.org/mail_perso",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "departement_naissance" : {
+      "id" : "http://wso2jsonschema.org/departement_naissance",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "remarques" : {
+      "id" : "http://wso2jsonschema.org/remarques",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "domaine" : {
+      "id" : "http://wso2jsonschema.org/domaine",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "niveau" : {
+      "id" : "http://wso2jsonschema.org/niveau",
+      "type" : "string",
+      "nullable" : "true"
+    },
+    "double" : {
+      "id" : "http://wso2jsonschema.org/double",
+      "type" : "boolean",
+      "nullable" : "true"
+    }
+  }
+}

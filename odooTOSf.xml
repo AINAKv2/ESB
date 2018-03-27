@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/osf" name="odooTOSf" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/add/emp2">
+        <inSequence>
+            <log level="full"/>
+            <!--  oauth authentif -->
+            <property name="accessToken" scope="default" type="STRING" value="00Dg0000003KtH4!AQcAQCfumESS_kEJW6EnGpcpcv8T13qHJy7892z_MyJNdP6EsUGrCUvmylcZUimXGTmuWl4yZJYxSjpLDK.0XuyrbKkHRCIc"/>
+            <property name="apiUrl" scope="default" type="STRING" value="https://leyton--sandbox1.cs17.my.salesforce.com/services/Soap/c/20.0/00Dg0000003KtH4"/>
+            <property name="clientId" scope="default" type="STRING" value="3MVG9ahGHqp.k2_yRlqxz7OtMpGmMrW1p6vKJ7j7LgnnE2StO7IAsuuX9CVTeHTVlMnOK6PratAGMQvjr74Ot"/>
+            <property name="refreshToken" scope="default" type="STRING" value="5Aep861O1Hc8GWyS4FH2K01dbYLe4fi3g2yJLLcm2r4ZUPWJulAhCzKjl2yksdmE9iz95JvOM3EK4VqcJFpgyZ7"/>
+            <property name="clientSecret" scope="default" type="STRING" value="8987360788733219856"/>
+            <property name="hostName" scope="default" type="STRING" value="https://test.salesforce.com"/>
+            <property name="apiVersion" scope="default" type="STRING" value="v20.0"/>
+            <property name="registryPath" scope="default" type="STRING" value="connectors/salesforcerest"/>
+            <property name="intervalTime" scope="default" type="STRING" value="100000"/>
+            <property name="sObjectName" scope="default" type="STRING" value="SFDC_Employee__c"/>
+            <!-- mapping -->
+            <datamapper config="gov:datamapper/odoo_sf.dmc" inputSchema="gov:datamapper/odoo_sf_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/odoo_sf_outputSchema.json" outputType="JSON"/>
+            <!--  our request -->
+            <property expression="json-eval($.fieldAndValue)" name="fieldAndValue" scope="default" type="STRING"/>
+            <salesforcerest.init>
+                <accessToken>{$ctx:accessToken}</accessToken>
+                <apiVersion>{$ctx:apiVersion}</apiVersion>
+                <hostName>{$ctx:hostName}</hostName>
+                <refreshToken>{$ctx:refreshToken}</refreshToken>
+                <clientSecret>{$ctx:clientSecret}</clientSecret>
+                <clientId>{$ctx:clientId}</clientId>
+                <apiUrl>{$ctx:apiUrl}</apiUrl>
+                <registryPath>{$ctx:registryPath}</registryPath>
+                <intervalTime>{$ctx:intervalTime}</intervalTime>
+            </salesforcerest.init>
+            <log level="full" separator=","/>
+            <salesforcerest.create>
+                <sObjectName>{$ctx:sObjectName}</sObjectName>
+                <fieldAndValue>{$ctx:fieldAndValue}</fieldAndValue>
+            </salesforcerest.create>
+            <!--   type of msg -->
+            <property description="property" name="messageType" scope="default" type="STRING" value="application/json"/>
+            <log level="full" separator=","/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
