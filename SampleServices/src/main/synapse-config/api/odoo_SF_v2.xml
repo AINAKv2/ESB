@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/sf" name="sfv2" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/add/emp3">
+        <inSequence>
+            <log level="full"/>
+            <!--  oauth authentif -->
+            <sequence key="S1"/>
+            <property name="sObjectName" scope="default" type="STRING" value="SFDC_Employee__c"/>
+            <!--  our request -->
+            <property expression="json-eval($.fieldAndValue)" name="fieldAndValue" scope="default" type="STRING"/>
+            <salesforcerest.init>
+                <accessToken>{$ctx:accessToken}</accessToken>
+                <apiVersion>{$ctx:apiVersion}</apiVersion>
+                <hostName>{$ctx:hostName}</hostName>
+                <refreshToken>{$ctx:refreshToken}</refreshToken>
+                <clientSecret>{$ctx:clientSecret}</clientSecret>
+                <clientId>{$ctx:clientId}</clientId>
+                <apiUrl>{$ctx:apiUrl}</apiUrl>
+                <registryPath>{$ctx:registryPath}</registryPath>
+                <intervalTime>{$ctx:intervalTime}</intervalTime>
+            </salesforcerest.init>
+            <log level="full" separator=","/>
+            <salesforcerest.create>
+                <sObjectName>{$ctx:sObjectName}</sObjectName>
+                <fieldAndValue>{$ctx:fieldAndValue}</fieldAndValue>
+            </salesforcerest.create>
+            <!--   type of msg -->
+            <property description="property" name="messageType" scope="default" type="STRING" value="application/json"/>
+            <log level="full" separator=","/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

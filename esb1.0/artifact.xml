@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="restSF" groupId="com.example.esb1.0.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/restSF.xml</file>
+    </artifact>
+    <artifact name="odooTOSf" groupId="com.example.esb1.0.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/odooTOSf.xml</file>
+    </artifact>
+    <artifact name="JsonToOdoo" groupId="com.example.esb1.0.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/JsonToOdoo.xml</file>
+    </artifact>
+    <artifact name="odooJson" groupId="com.example.esb1.0.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/odooJson.xml</file>
+    </artifact>
+</artifacts>

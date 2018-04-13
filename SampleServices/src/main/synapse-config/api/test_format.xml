@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/format" name="test_format" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/id">
+        <inSequence>
+            <log level="full"/>
+            <script language="js"><![CDATA[var binaryNode = mc.getEnvelope().getBody().getFirstElement().getFirstOMChild();     
+             binaryNode.setBinary(true);]]></script>
+            <property name="messageType" scope="axis2" type="STRING" value="application/pdf"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

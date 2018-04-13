@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="odooEP" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="post" uri-template="http://172.16.1.225:9443/receive"/>
+</endpoint>

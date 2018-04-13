@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/aigle" name="aigle_from_db" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/id/{fileId}">
+        <inSequence>
+            <property expression="get-property('uri.var.fileId')" name="ID" scope="default" type="STRING"/>
+            <dblookup>
+                <connection>
+                    <pool>
+                        <password>root</password>
+                        <driver>org.postgresql.Driver</driver>
+                        <url>jdbc:postgresql://localhost:5432/postgres</url>
+                        <user>postgres</user>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[select pdf_base64 from pdf_files where id = ?]]></sql>
+                    <parameter expression="get-property('ID')" type="INTEGER"/>
+                    <result column="pdf_base64" name="pdf_base64"/>
+                </statement>
+            </dblookup>
+            <payloadFactory media-type="xml">
+                <format>
+                    <ns:binary xmlns:ns="http://ws.apache.org/commons/ns/payload">$1</ns:binary>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('pdf_base64')"/>
+                </args>
+            </payloadFactory>
+            <loopback/>
+        </inSequence>
+        <outSequence>
+            <script language="js"><![CDATA[var binaryNode = mc.getEnvelope().getBody().getFirstElement().getFirstOMChild();     
+             binaryNode.setBinary(true);]]></script>
+            <property name="messageType" scope="axis2" type="STRING" value="application/pdf"/>
+            <respond/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

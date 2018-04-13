@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/aze" name="Test_pdf" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/send/pdf">
+        <inSequence>
+            <log description="send a pdf file to AIGLE" level="full"/>
+            <enrich>
+                <source clone="true" type="body"/>
+                <target property="originalBody" type="property"/>
+            </enrich>
+            <property name="messageType" scope="axis2" type="STRING" value="application/pdf"/>
+            <payloadFactory media-type="xml">
+                <format>
+                    <root xmlns="">
+                        <file charset="US-ASCII" content-type="multipart/file" filename="file" name="file" xmlns="http://org.apache.axis2/xsd/form-data">$1</file>
+                    </root>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:originalBody"/>
+                </args>
+            </payloadFactory>
+            <header name="Content-Type" scope="transport" value="application/pdf"/>
+            <property name="messageType" scope="axis2" type="STRING" value="application/pdf"/>
+            <property name="OUT_ONLY" scope="default" type="STRING" value="true"/>
+            <log description="send a pdf file to AIGLE2" level="full"/>
+            <send>
+                <endpoint key="aigle_pdf"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

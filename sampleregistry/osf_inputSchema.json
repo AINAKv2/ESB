@@ -1,0 +1,120 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "nom" : {
+      "id" : "http://wso2jsonschema.org/nom",
+      "type" : "string"
+    },
+    "work_email" : {
+      "id" : "http://wso2jsonschema.org/work_email",
+      "type" : "string"
+    },
+    "titre" : {
+      "id" : "http://wso2jsonschema.org/titre",
+      "type" : "string"
+    },
+    "prenom" : {
+      "id" : "http://wso2jsonschema.org/prenom",
+      "type" : "string"
+    },
+    "work_phone" : {
+      "id" : "http://wso2jsonschema.org/work_phone",
+      "type" : "string"
+    },
+    "ligne_interne" : {
+      "id" : "http://wso2jsonschema.org/ligne_interne",
+      "type" : "string"
+    },
+    "ligne_directe" : {
+      "id" : "http://wso2jsonschema.org/ligne_directe",
+      "type" : "string"
+    },
+    "status" : {
+      "id" : "http://wso2jsonschema.org/status",
+      "type" : "string"
+    },
+    "centre_cout" : {
+      "id" : "http://wso2jsonschema.org/centre_cout",
+      "type" : "string"
+    },
+    "ssnid" : {
+      "id" : "http://wso2jsonschema.org/ssnid",
+      "type" : "string"
+    },
+    "company_id" : {
+      "id" : "http://wso2jsonschema.org/company_id",
+      "type" : "string"
+    },
+    "pole_ids" : {
+      "id" : "http://wso2jsonschema.org/pole_ids",
+      "type" : "string"
+    },
+    "site_geo" : {
+      "id" : "http://wso2jsonschema.org/site_geo",
+      "type" : "string"
+    },
+    "fax" : {
+      "id" : "http://wso2jsonschema.org/fax",
+      "type" : "string"
+    },
+    "type_contrat" : {
+      "id" : "http://wso2jsonschema.org/type_contrat",
+      "type" : "string"
+    },
+    "address" : {
+      "id" : "http://wso2jsonschema.org/address",
+      "type" : "string"
+    },
+    "code_postal" : {
+      "id" : "http://wso2jsonschema.org/code_postal",
+      "type" : "string"
+    },
+    "birthday" : {
+      "id" : "http://wso2jsonschema.org/birthday",
+      "type" : "string"
+    },
+    "marital" : {
+      "id" : "http://wso2jsonschema.org/marital",
+      "type" : "string"
+    },
+    "mobile_personnel" : {
+      "id" : "http://wso2jsonschema.org/mobile_personnel",
+      "type" : "string"
+    },
+    "ville" : {
+      "id" : "http://wso2jsonschema.org/ville",
+      "type" : "string"
+    },
+    "ville_naissance" : {
+      "id" : "http://wso2jsonschema.org/ville_naissance",
+      "type" : "string"
+    },
+    "mail_perso" : {
+      "id" : "http://wso2jsonschema.org/mail_perso",
+      "type" : "string"
+    },
+    "departement_naissance" : {
+      "id" : "http://wso2jsonschema.org/departement_naissance",
+      "type" : "string"
+    },
+    "remarques" : {
+      "id" : "http://wso2jsonschema.org/remarques",
+      "type" : "string"
+    },
+    "domaine" : {
+      "id" : "http://wso2jsonschema.org/domaine",
+      "type" : "string"
+    },
+    "niveau" : {
+      "id" : "http://wso2jsonschema.org/niveau",
+      "type" : "string"
+    },
+    "double" : {
+      "id" : "http://wso2jsonschema.org/double",
+      "type" : "string"
+    }
+  }
+}

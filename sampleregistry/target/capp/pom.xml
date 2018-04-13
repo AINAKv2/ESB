@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.sampleregistry</groupId>
+  <artifactId>sampleregistry_module</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>sampleregistry_module</name>
+  <description>sampleregistry_module</description>
+  <modules>
+    <module>artifacts/resource/osf</module>
+    <module>artifacts/resource/osf_inputSchema</module>
+    <module>artifacts/resource/osf_outputSchema</module>
+    <module>artifacts/resource/datamapper1</module>
+    <module>artifacts/resource/datamapper1_inputSchema</module>
+    <module>artifacts/resource/datamapper1_outputSchema</module>
+  </modules>
+</project>

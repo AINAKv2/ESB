@@ -1,0 +1,126 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "id" : "http://wso2jsonschema.org",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "fieldAndValue" : {
+      "id" : "http://wso2jsonschema.org/fieldAndValue",
+      "type" : "object",
+      "properties" : {
+        "Name" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Name",
+          "type" : "string"
+        },
+        "Email_Address__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Email_Address__c",
+          "type" : "string"
+        },
+        "Title__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Title__c",
+          "type" : "string"
+        },
+        "Pr_nom__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Pr_nom__c",
+          "type" : "string"
+        },
+        "N_Mobile_Professionnel__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/N_Mobile_Professionnel__c",
+          "type" : "string"
+        },
+        "Ligne_Tel_Interne__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Ligne_Tel_Interne__c",
+          "type" : "string"
+        },
+        "Phone_Number__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Phone_Number__c",
+          "type" : "string"
+        },
+        "Statut__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Statut__c",
+          "type" : "string"
+        },
+        "Centre_de_couts__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Centre_de_couts__c",
+          "type" : "string"
+        },
+        "N_S_curit_Sociale__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/N_S_curit_Sociale__c",
+          "type" : "string"
+        },
+        "Soci_t__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Soci_t__c",
+          "type" : "string"
+        },
+        "Unit__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Unit__c",
+          "type" : "string"
+        },
+        "Location__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Location__c",
+          "type" : "string"
+        },
+        "Employee_fax__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Employee_fax__c",
+          "type" : "string"
+        },
+        "Type_Contrat__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Type_Contrat__c",
+          "type" : "string"
+        },
+        "Home_Address__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Home_Address__c",
+          "type" : "string"
+        },
+        "Code_Postal__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Code_Postal__c",
+          "type" : "string"
+        },
+        "DOB__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/DOB__c",
+          "type" : "string"
+        },
+        "Marital_Status__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Marital_Status__c",
+          "type" : "string"
+        },
+        "N_Mobile_Personnel__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/N_Mobile_Personnel__c",
+          "type" : "string"
+        },
+        "Ville__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Ville__c",
+          "type" : "string"
+        },
+        "Ville_de_naissance__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Ville_de_naissance__c",
+          "type" : "string"
+        },
+        "Home_Email__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Home_Email__c",
+          "type" : "string"
+        },
+        "D_partement_de_naissance__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/D_partement_de_naissance__c",
+          "type" : "string"
+        },
+        "Remarque__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Remarque__c",
+          "type" : "string"
+        },
+        "Domaine__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Domaine__c",
+          "type" : "string"
+        },
+        "Education__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Education__c",
+          "type" : "string"
+        },
+        "Double_Cursus__c" : {
+          "id" : "http://wso2jsonschema.org/fieldAndValue/Double_Cursus__c",
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

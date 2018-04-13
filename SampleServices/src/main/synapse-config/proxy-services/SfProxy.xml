@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="SfProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <inSequence>
+            <property expression="json-eval($.accessToken)" name="accessToken" scope="default" type="STRING"/>
+            <property expression="json-eval($.apiUrl)" name="apiUrl" scope="default" type="STRING"/>
+            <property expression="json-eval($.queryString)" name="queryString" scope="default" type="STRING"/>
+            <property expression="json-eval($.clientId)" name="clientId" scope="default" type="STRING"/>
+            <property expression="json-eval($.refreshToken)" name="refreshToken" scope="default" type="STRING"/>
+            <property expression="json-eval($.clientSecret)" name="clientSecret" scope="default" type="STRING"/>
+            <property expression="json-eval($.hostName)" name="hostName" scope="default" type="STRING"/>
+            <property expression="json-eval($.apiVersion)" name="apiVersion" scope="default" type="STRING"/>
+            <property expression="json-eval($.registryPath)" name="registryPath" scope="default" type="STRING"/>
+            <property expression="json-eval($.intervalTime)" name="intervalTime" scope="default" type="STRING"/>
+            <salesforcerest.init>
+                <accessToken>00Dg0000003KtH4!AQcAQN1bp3gFCEPhyHPmK7ssP4wrondZ9OGVhhbKRTQu4usjL7NZVgUUWWVNNJ1lRxGtmTPHqfCG2ud4NKmijV0G3qQCEbeQ</accessToken>
+                <apiVersion>1.0</apiVersion>
+                <hostName>https://test.salesforce.com</hostName>
+                <refreshToken>5Aep861O1Hc8GWyS4FH2K01dbYLe4fi3g2yJLLcm2r4ZUPWJunSnSpmJz2VEUcuK_t5YSQeMtSFVDDRAXbsT7io</refreshToken>
+                <clientSecret>8987360788733219856</clientSecret>
+                <clientId>3MVG9ahGHqp.k2_yRlqxz7OtMpGmMrW1p6vKJ7j7LgnnE2StO7IAsuuX9CVTeHTVlMnOK6PratAGMQvjr74Ot</clientId>
+                <apiUrl>https://leyton--sandbox1.cs17.my.salesforce.com</apiUrl>
+                <registryPath>connectors/salesforcerest</registryPath>
+                <intervalTime>100000</intervalTime>
+            </salesforcerest.init>
+            <log level="full" separator=","/>
+            <salesforcerest.query>
+                <queryString>Select id, name from SFDC_Employee__c</queryString>
+            </salesforcerest.query>
+            <send/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </target>
+</proxy>

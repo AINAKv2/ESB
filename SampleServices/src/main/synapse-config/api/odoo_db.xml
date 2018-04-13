@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/insert" name="odoo_db" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/pdf">
+        <inSequence>
+            <!-- db report for inserting  -->
+            <dblookup>
+                <connection>
+                    <pool>
+                        <password>root</password>
+                        <driver>org.postgresql.Driver</driver>
+                        <url>jdbc:postgresql://localhost:5432/postgres</url>
+                        <user>postgres</user>
+                    </pool>
+                </connection>
+                <statement>
+                    <sql><![CDATA[insert pdf_base64 from pdf_files where id = ?]]></sql>
+                    <parameter expression="get-property('ID')" type="INTEGER"/>
+                    <result column="pdf_base64" name="pdf_base64"/>
+                </statement>
+            </dblookup>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

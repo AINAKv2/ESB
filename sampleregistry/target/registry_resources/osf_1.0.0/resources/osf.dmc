@@ -1,0 +1,64 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+
+outputroot =  {};
+outputroot.fieldAndValue =  {};
+outputroot.fieldAndValue.Name = inputroot.nom;
+outputroot.fieldAndValue.Email_Address__c = inputroot.work_email;
+outputroot.fieldAndValue.Title__c = inputroot.titre;
+outputroot.fieldAndValue.Pr_nom__c = inputroot.prenom;
+outputroot.fieldAndValue.N_Mobile_Professionnel__c = inputroot.work_phone;
+outputroot.fieldAndValue.Ligne_Tel_Interne__c = inputroot.ligne_interne;
+outputroot.fieldAndValue.Phone_Number__c = inputroot.ligne_directe;
+outputroot.fieldAndValue.Statut__c = inputroot.status;
+outputroot.fieldAndValue.Centre_de_couts__c = inputroot.centre_cout;
+outputroot.fieldAndValue.N_S_curit_Sociale__c = inputroot.ssnid;
+outputroot.fieldAndValue.Soci_t__c = inputroot.company_id;
+outputroot.fieldAndValue.Unit__c = inputroot.pole_ids;
+outputroot.fieldAndValue.Location__c = inputroot.site_geo;
+outputroot.fieldAndValue.Employee_fax__c = inputroot.fax;
+outputroot.fieldAndValue.Type_Contrat__c = inputroot.type_contrat;
+outputroot.fieldAndValue.Home_Address__c = inputroot.address;
+outputroot.fieldAndValue.Code_Postal__c = inputroot.code_postal;
+outputroot.fieldAndValue.DOB__c = inputroot.birthday;
+outputroot.fieldAndValue.Marital_Status__c = inputroot.marital;
+outputroot.fieldAndValue.N_Mobile_Personnel__c = inputroot.mobile_personnel;
+outputroot.fieldAndValue.Ville__c = inputroot.ville;
+outputroot.fieldAndValue.Ville_de_naissance__c = inputroot.ville_naissance;
+outputroot.fieldAndValue.Home_Email__c = inputroot.mail_perso;
+outputroot.fieldAndValue.D_partement_de_naissance__c = inputroot.departement_naissance;
+outputroot.fieldAndValue.Remarque__c = inputroot.remarques;
+outputroot.fieldAndValue.Domaine__c = inputroot.domaine;
+outputroot.fieldAndValue.Education__c = inputroot.niveau;
+outputroot.fieldAndValue.Double_Cursus__c = inputroot.double;
+return outputroot;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
